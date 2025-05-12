@@ -1,25 +1,25 @@
- const { config } = global.GoatBot;
+const { config } = global.GoatBot;
 const { writeFileSync } = require("fs-extra");
 
 module.exports = {
         config: {
                 name: "admin",
                 version: "1.6",
-                author: "messie osango",
+                author: "Messie Osango", 
                 countDown: 5,
                 role: 2,
                 description: {
                         vi: "Thêm, xóa, sửa quyền admin",
-                        en: "Add, remove, edit admin role"
+                        fr: "Ajouter, supprimer ou modifier les administrateurs" 
                 },
                 category: "box chat",
                 guide: {
                         vi: '   {pn} [add | -a] <uid | @tag>: Thêm quyền admin cho người dùng'
                                 + '\n          {pn} [remove | -r] <uid | @tag>: Xóa quyền admin của người dùng'
                                 + '\n          {pn} [list | -l]: Liệt kê danh sách admin',
-                        en: '   {pn} [add | -a] <uid | @tag>: Add admin role for user'
-                                + '\n          {pn} [remove | -r] <uid | @tag>: Remove admin role of user'
-                                + '\n          {pn} [list | -l]: List all admins'
+                        fr: '   {pn} [add | -a] <uid | @tag>: Ajouter un administrateur'
+                                + '\n          {pn} [remove | -r] <uid | @tag>: Retirer un administrateur'
+                                + '\n          {pn} [list | -l]: Liste des administrateurs'
                 }
         },
 
@@ -33,14 +33,14 @@ module.exports = {
                         missingIdRemove: "⚠️ | Vui lòng nhập ID hoặc tag người dùng muốn xóa quyền admin",
                         listAdmin: "👑 | Danh sách admin:\n%1"
                 },
-                en: {
-                        added: "✅ | Added admin role for %1 users:\n%2",
-                        alreadyAdmin: "\n⚠️ | %1 users already have admin role:\n%2",
-                        missingIdAdd: "⚠️ | Please enter ID or tag user to add admin role",
-                        removed: "✅ | Removed admin role of %1 users:\n%2",
-                        notAdmin: "⚠️ | %1 users don't have admin role:\n%2",
-                        missingIdRemove: "⚠️ | Please enter ID or tag user to remove admin role",
-                        listAdmin: "____________________\n𝐿𝐴 𝐿𝐼𝑆𝑇𝐸 𝐷𝐸 𝑀𝐸𝑆 𝐴𝐷𝑀𝐼𝑁𝐼𝑆𝑇𝑅𝐴𝑇𝐸𝑈𝑅𝑆:\n---------------------\n%1\n____•____•____•"
+                fr: { 
+                        added: "╭───⌾⋅ 𝐾𝐴𝐾𝐴𝑆𝐻𝐼 𝐵𝑜𝑡 ⋅⌾───╮\n│\n│   ✅ %1 administrateur(s) ajouté(s):\n│   %2\n│\n╰──────⌾⋅ ⌾ ⋅⌾──────╯",
+                        alreadyAdmin: "\n╭───⌾⋅ 𝐴𝑉𝐸𝑅𝑇𝐼𝑆𝑆𝐸𝑀𝐸𝑁𝑇 ⋅⌾───╮\n│\n│   ⚠️ %1 utilisateur(s) déjà admin:\n│   %2\n│\n╰──────⌾⋅ ⌾ ⋅⌾──────╯",
+                        missingIdAdd: "╭───⌾⋅ 𝐸𝑅𝑅𝐸𝑈𝑅 ⋅⌾───╮\n│\n│   ⚠️ Veuillez spécifier un ID ou taguer un utilisateur\n│\n╰──────⌾⋅ ⌾ ⋅⌾──────╯",
+                        removed: "╭───⌾⋅ 𝐾𝐴𝐾𝐴𝑆𝐻𝐼 𝐵𝑜𝑡 ⋅⌾───╮\n│\n│   ✅ %1 administrateur(s) retiré(s):\n│   %2\n│\n╰──────⌾⋅ ⌾ ⋅⌾──────╯",
+                        notAdmin: "\n╭───⌾⋅ 𝐴𝑉𝐸𝑅𝑇𝐼𝑆𝑆𝐸𝑀𝐸𝑁𝑇 ⋅⌾───╮\n│\n│   ⚠️ %1 utilisateur(s) non administrateur:\n│   %2\n│\n╰──────⌾⋅ ⌾ ⋅⌾──────╯",
+                        missingIdRemove: "╭───⌾⋅ 𝐸𝑅𝑅𝐸𝑈𝑅 ⋅⌾───╮\n│\n│   ⚠️ Veuillez spécifier un ID ou taguer un utilisateur\n│\n╰──────⌾⋅ ⌾ ⋅⌾──────╯",
+                        listAdmin: "╭──────⌾⋅ 𝐴𝐷𝑀𝐼𝑁𝑆 ⋅⌾──────╮\n│\n│   👑 Liste des administrateurs:\n│   %1\n│\n╰──────⌾⋅ ⌾ ⋅⌾──────╯"
                 }
         },
 
