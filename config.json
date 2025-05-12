@@ -35,7 +35,7 @@
     "ignoreCommand": []
   },
   "adminBot": [
-    "61564382117276"
+    "100076177782062"
   ],
   "whiteListMode": {
     "enable": false,
@@ -44,7 +44,7 @@
     ],
     "notes": "if you enable this feature, only the ids in the whiteListIds section can use the bot"
   },
-  "nickNameBot": "༒✯𝑆𝐴𝑇𝑂𝑅𝑈 𝐺𝑂𝐽𝑂 𝐵𝑂𝑇✯༒",
+  "nickNameBot": "𝐾𝐴𝐾𝐴𝑆𝐻𝐼 𝐁𝐨𝐭 ┐⁠(⁠‘⁠～⁠`⁠;⁠)⁠┌",
   "prefix": "€",
   "ArYanapi": "https://aryan-rest-api.onrender.com",
   "api": "",
