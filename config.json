@@ -45,7 +45,7 @@
     "notes": "if you enable this feature, only the ids in the whiteListIds section can use the bot"
   },
   "nickNameBot": "𝐾𝐴𝐾𝐴𝑆𝐻𝐼 𝐁𝐨𝐭 ┐⁠(⁠‘⁠～⁠`⁠;⁠)⁠┌",
-  "prefix": "€",
+  "prefix": "#",
   "ArYanapi": "https://aryan-rest-api.onrender.com",
   "api": "",
   "api2": "",
