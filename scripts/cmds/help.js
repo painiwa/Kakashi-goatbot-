@@ -3,13 +3,13 @@ const axios = require("axios");
 const path = require("path");
 const { getPrefix } = global.utils;
 const { commands, aliases } = global.GoatBot;
-const doNotDelete = "[ 𝑀𝐸𝑆𝑆𝐼𝐸 𝕆𝐒𝐀𝐍𝐆𝐎 ]"; // changing this wont change the goatbot V2 of list cmd it is just a decoyy
+const doNotDelete = "[ 𝑀𝐸𝑆𝑆𝐼𝐸 𝕆𝐒𝐴𝐍𝐺𝐿 ]";
 
 module.exports = {
   config: {
     name: "help",
     version: "1.17",
-    author: "𝑀𝐸𝑆𝑆𝐼𝐸 𝑂𝑆𝐴𝑁𝐺𝑂", // original author Kshitiz 
+    author: "𝑀𝐸𝑆𝑆𝐼𝐸 𝑂𝑆𝐴𝑁𝐺𝑂",
     countDown: 10,
     role: 0,
     shortDescription: {
@@ -34,7 +34,7 @@ module.exports = {
       const categories = {};
       let msg = "";
 
-      msg += `╔═════۩✯★✯۩═════╗\n✰ 𝑀𝐸𝑆𝑆𝐼𝐸 𝑂𝑆𝐴𝑁𝐺𝑂 ✰\n╚═════۩✯★✯۩═════╝`; // replace with your name 
+      msg += `╭──⌾⋅ 𝐾𝐴𝐾𝐴𝑆𝐻𝐼 𝐵𝑜𝑡 ⋅⌾──╮\n│\n│   ✰ 𝑀𝐸𝑆𝑆𝐼𝐸 𝑂𝑆𝐴𝑁𝐺𝑂 ✰\n│`;
 
       for (const [name, value] of commands) {
         if (value.config.role > 1 && role < value.config.role) continue;
@@ -46,25 +46,20 @@ module.exports = {
 
       Object.keys(categories).forEach((category) => {
         if (category !== "info") {
-          msg += `\n╭─★────✯───★─\n│ 『  ${category.toUpperCase()}  』`;
+          msg += `\n│\n│ ╭─★────✯───★─\n│ │ 『  ${category.toUpperCase()}  』`;
 
           const names = categories[category].commands.sort();
           for (let i = 0; i < names.length; i += 3) {
             const cmds = names.slice(i, i + 3).map((item) => `✯${item}`);
-            msg += `\n│ ${cmds.join(" ".repeat(Math.max(1, 10 - cmds.join("").length)))}`;
+            msg += `\n│ │ ${cmds.join(" ".repeat(Math.max(1, 10 - cmds.join("").length)))}`;
           }
 
-          msg += `\n╰──★──✯──★──✯`;
+          msg += `\n│ ╰──★──✯──★──✯`;
         }
       });
 
       const totalCommands = commands.size;
-      msg += `\ CONTACT 𝑀𝐸𝑆𝑆𝐼𝐸 𝑂𝑆𝐴𝑁𝐺𝑂  page   FACEBOOK: 
-
-https://www.facebook.com/profile.php?id=61568305950691  
-\n`;
-
-      msg += ` | 𝑀𝐸𝑆𝑆𝐼𝐸 𝑂𝑆𝐴𝑁𝐺𝑂✯ |`; // Voici la liste de mes cmds.
+      msg += `\n│\n│ CONTACT 𝑀𝐸𝑆𝑆𝐼𝐸 𝑂𝑆𝐴𝑁𝐺𝑂  page   FACEBOOK:\n│\n│ https://www.facebook.com/profile.php?id=61568305950691\n│\n│ ╰──────⌾⋅ ⌾ ⋅⌾──────╯\n│ 𝑀𝐸𝑆𝑆𝐼𝐸 𝑂𝑆𝐴𝑁𝐺𝑂 ✯`;
 
       await message.reply(msg);
     } else {
@@ -83,22 +78,26 @@ https://www.facebook.com/profile.php?id=61568305950691
         const guideBody = configCommand.guide?.en || "No guide available.";
         const usage = guideBody.replace(/{p}/g, prefix).replace(/{n}/g, configCommand.name);
 
-        const response = `╭─★─ NAME ──★──✯
-  │ ${configCommand.name}
-  ├── INFO
-  │ Description: ${longDescription}
-  │ Other names: ${configCommand.aliases ? configCommand.aliases.join(", ") : "Do not have"}
-  │ Other names in your group: Do not have
-  │ Version: ${configCommand.version || "1.0"}
-  │ Role: ${roleText}
-  │ Time per command: ${configCommand.countDown || 1}s
-  │ Author: ${author}
-  ├── Usage
-  │ ${usage}
-  ├── Notes
-  │ The content inside <XXXXX> can be changed
-  │ The content inside [a|b|c] is a or b or c
-  ╰━━★━━━★━━✯`;
+        const response = `╭──⌾⋅ 𝐾𝐴𝐾𝐴𝑆𝐻𝐼 𝐵𝑜𝑡 ⋅⌾──╮
+│
+│ ╭─★─ NAME ──★──✯
+│ │ ${configCommand.name}
+│ ├── INFO
+│ │ Description: ${longDescription}
+│ │ Other names: ${configCommand.aliases ? configCommand.aliases.join(", ") : "Do not have"}
+│ │ Other names in your group: Do not have
+│ │ Version: ${configCommand.version || "1.0"}
+│ │ Role: ${roleText}
+│ │ Time per command: ${configCommand.countDown || 1}s
+│ │ Author: ${author}
+│ ├── Usage
+│ │ ${usage}
+│ ├── Notes
+│ │ The content inside <XXXXX> can be changed
+│ │ The content inside [a|b|c] is a or b or c
+│ ╰━━★━━━★━━✯
+│
+╰──────⌾⋅ ⌾ ⋅⌾──────╯`;
 
         await message.reply(response);
       }
@@ -117,4 +116,4 @@ function roleTextToString(roleText) {
     default:
       return "Unknown role";
   }
-      }
+}
